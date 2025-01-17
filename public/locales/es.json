@@ -1,0 +1,16 @@
+{
+    "home": "Inicio",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "table": "Tabla",
+    "charts": "Gráficos",
+    "table_with_pagination": "Tabla P",
+    "footer_text": "Todos los derechos reservados.",
+    "dashboard_title": "Panel de datos de usuario",
+  "users_by_city": "Usuarios por ciudad",
+  "users_by_company": "Usuarios por empresa",
+  "user_geo_locations": "Ubicaciones geográficas de los usuarios",
+  "users": "Usuarios",
+  "posts_table": "Tabla de publicaciones"
+  }
+  

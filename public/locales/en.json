@@ -1,0 +1,16 @@
+{
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "table": "Table",
+    "charts": "Charts",
+    "table_with_pagination": "Table P",
+    "footer_text": "All rights reserved.",
+    "dashboard_title": "User Data Dashboard",
+  "users_by_city": "Users by City",
+  "users_by_company": "Users by Company",
+  "user_geo_locations": "User Geo Locations",
+  "users": "Users",
+  "posts_table": "Posts Table"
+  }
+  

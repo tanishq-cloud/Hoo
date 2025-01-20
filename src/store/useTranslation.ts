@@ -10,8 +10,8 @@ interface TranslationStore {
 export const useTranslationStore = create<TranslationStore>((set) => ({
   language: i18n.language || "en",
   setLanguage: (lang: string) => {
-    i18n.changeLanguage(lang); // Change the i18n language
+    i18n.changeLanguage(lang); 
     set({ language: lang });
   },
-  translate: (key: string) => i18n.t(key), // Translate a key using i18n
+  translate: (key: string) => i18n.t(key), 
 }));

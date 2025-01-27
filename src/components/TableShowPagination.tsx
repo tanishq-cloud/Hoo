@@ -25,26 +25,26 @@ export const Table: React.FC = () => {
     }
   };
 
-  // Generate page numbers to display
   const getPageNumbers = () => {
     const pages = [];
     const maxVisiblePages = 5;
-    
+
     if (totalPages <= maxVisiblePages) {
-      // Show all pages if total pages are less than max visible
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
       }
     } else {
-      // Always show first page
       pages.push(1);
-      
+
       if (currentPage > 3) {
         pages.push("ellipsis");
       }
 
-      // Show pages around current page
-      for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+      for (
+        let i = Math.max(2, currentPage - 1);
+        i <= Math.min(totalPages - 1, currentPage + 1);
+        i++
+      ) {
         pages.push(i);
       }
 
@@ -52,7 +52,6 @@ export const Table: React.FC = () => {
         pages.push("ellipsis");
       }
 
-      // Always show last page
       pages.push(totalPages);
     }
 
@@ -62,13 +61,17 @@ export const Table: React.FC = () => {
   return (
     <div className="p-4 w-full space-y-4">
       <DataTable columns={columns} data={data} />
-      
+
       <Pagination>
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious
               onClick={() => handlePageChange(currentPage - 1)}
-              className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+              className={
+                currentPage === 1
+                  ? "pointer-events-none opacity-50"
+                  : "cursor-pointer"
+              }
             />
           </PaginationItem>
 
@@ -91,7 +94,11 @@ export const Table: React.FC = () => {
           <PaginationItem>
             <PaginationNext
               onClick={() => handlePageChange(currentPage + 1)}
-              className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+              className={
+                currentPage === totalPages
+                  ? "pointer-events-none opacity-50"
+                  : "cursor-pointer"
+              }
             />
           </PaginationItem>
         </PaginationContent>

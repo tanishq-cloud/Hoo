@@ -1,16 +1,35 @@
 {
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact",
-    "table": "Table",
-    "charts": "Charts",
-    "table_with_pagination": "Table P",
-    "footer_text": "All rights reserved.",
-    "dashboard_title": "User Data Dashboard",
+  "home": "Home",
+  "about": "About",
+  "contact": "Contact",
+  "Table": "Table",
+  "Charts": "Charts",
+  "Table P": "Table P",
+  "footer_text": "All rights reserved.",
+  "dashboard_title": "User Data Dashboard",
   "users_by_city": "Users by City",
+  "users_by_city_des": "This chart displays the distribution of users across various cities. Each bar represents the number of users in a specific city.",
   "users_by_company": "Users by Company",
+  "users_by_company_des": "This pie chart highlights the proportion of users associated with different companies. Each slice represents a company and its user count.",
   "user_geo_locations": "User Geo Locations",
+  "user_geo_locations_des": "This line chart shows the geographical locations of users by latitude and longitude. Each line represents a dimension of the location data.",
   "users": "Users",
-  "posts_table": "Posts Table"
-  }
-  
+  "posts_table": "Posts Table",
+  "index_title": "Application Overview and Optimization Techniques",
+  "zustand_translation": "Using Zustand for Translation",
+  "zustand_description": "Using Zustand to manage translations dynamically across the application. This enables easy language switching, improving the user experience for different languages.",
+
+  "react_query_infinite": "Infinite Scroll with TanStack React Query",
+  "react_query_infinite_description": "Using TanStack React Query's useInfiniteQuery to implement infinite scroll functionality in our tables.",
+
+  "axios_api": "Managing API Calls with Axios",
+  "axios_api_description": "Axios is used for handling API requests in a structured way, ensuring easy management of GET and POST requests with robust error handling.",
+
+  "component_architecture": "Component-based Architecture",
+  "component_architecture_description": "By breaking the app into smaller, reusable components, ensuring that only the necessary components re-render when state changes, optimizing performance and reducing unnecessary renders.",
+
+  "lazy_loading_router": "Lazy Loading with TanStack Router",
+  "lazy_loading_router_description": "Using TanStack Router for lazy loading of components, which helps to load only the required parts of the application when needed, improving the initial load time and user experience.",
+
+  "click_to_change_view": "Click the tab above to change the view or load a specific component."
+}

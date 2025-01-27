@@ -1,4 +1,5 @@
-import { create } from "zustand";
+import { useQuery } from "@tanstack/react-query";
+import axiosClient, { isAxiosError } from "@/utils/axiosClient";
 
 interface Address {
   street: string;
@@ -28,26 +29,16 @@ interface User {
   company: Company;
 }
 
-interface ChartData {
+export interface UserData {
   cities: { city: string; users: number }[];
   companies: { company: string; users: number }[];
   geoLocations: { user: string; lat: number; lng: number }[];
 }
 
-interface ChartStore {
-  chartData: ChartData;
-  fetchChartData: () => Promise<void>;
-}
-
-export const useChartStore = create<ChartStore>((set) => ({
-  chartData: {
-    cities: [],
-    companies: [],
-    geoLocations: [],
-  },
-  fetchChartData: async () => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    const data: User[] = await response.json();
+const fetchUserData = async (): Promise<UserData> => {
+  try {
+    const response = await axiosClient.get<User[]>("/users");
+    const { data } = response;
 
     const cities = data.reduce<{ [key: string]: number }>((acc, user) => {
       acc[user.address.city] = (acc[user.address.city] || 0) + 1;
@@ -65,15 +56,27 @@ export const useChartStore = create<ChartStore>((set) => ({
       lng: parseFloat(user.address.geo.lng),
     }));
 
-    set({
-      chartData: {
-        cities: Object.entries(cities).map(([city, users]) => ({ city, users })),
-        companies: Object.entries(companies).map(([company, users]) => ({
-          company,
-          users,
-        })),
-        geoLocations,
-      },
-    });
-  },
-}));
+    return {
+      cities: Object.entries(cities).map(([city, users]) => ({ city, users })),
+      companies: Object.entries(companies).map(([company, users]) => ({
+        company,
+        users,
+      })),
+      geoLocations,
+    };
+  } catch (error) {
+    if (isAxiosError(error)) {
+      console.error(`Axios error: ${error.message}`);
+      throw new Error(`Failed to fetch user data: ${error.message}`);
+    }
+    console.error(`Unexpected error: ${error}`);
+    throw error;
+  }
+};
+
+export const useUserData = () => {
+  return useQuery<UserData, Error>({
+    queryKey: ["userData"],
+    queryFn: fetchUserData,
+  });
+};

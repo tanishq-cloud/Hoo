@@ -24,7 +24,7 @@ function LanguageSelector() {
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            <SelectLabel>Languages</SelectLabel>
+            <SelectLabel><strong>Languages</strong></SelectLabel>
             <SelectItem value="en">English</SelectItem>
             <SelectItem value="fr">Français</SelectItem>
             <SelectItem value="es">Español</SelectItem>

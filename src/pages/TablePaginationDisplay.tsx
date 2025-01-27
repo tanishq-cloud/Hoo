@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "@/components/TableShow";
+import { Table } from "@/components/TableShowPagination";
 import { useTranslationStore } from "@/store/useTranslation";
 
 const TablePage: React.FC = () => {

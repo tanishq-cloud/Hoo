@@ -2,15 +2,36 @@
     "home": "Accueil",
     "about": "À propos",
     "contact": "Contact",
-    "table": "Tableau",
-    "charts": "Graphiques",
-    "table_with_pagination": "Tableau P",
+    "Table": "Tableau",
+    "Charts": "Graphiques",
+    "Table P": "Tableau P",
     "footer_text": "Tous droits réservés.",
     "dashboard_title": "Tableau de données utilisateur",
   "users_by_city": "Utilisateurs par ville",
+  "users_by_city_des": "Ce graphique affiche la répartition des utilisateurs dans différentes villes. Chaque barre représente le nombre d'utilisateurs dans une ville spécifique.",
   "users_by_company": "Utilisateurs par entreprise",
+  "users_by_company_des": "Ce graphique en secteurs met en évidence la proportion d'utilisateurs associés à différentes entreprises. Chaque tranche représente une entreprise et son nombre d'utilisateurs.",
   "user_geo_locations": "Localisations géographiques des utilisateurs",
+  "user_geo_locations_des": "Ce graphique linéaire montre les emplacements géographiques des utilisateurs par latitude et longitude. Chaque ligne représente une dimension des données de localisation.",
   "users": "Utilisateurs",
-  "posts_table": "Tableau des publications"
+  "posts_table": "Tableau des publications",
+  "index_title": "Présentation de l'application et techniques d'optimisation",
+  "zustand_translation": "Utilisation de Zustand pour la traduction",
+  "zustand_description": "Nous utilisons Zustand pour gérer les traductions de manière dynamique dans l'ensemble de l'application. Cela permet un changement de langue facile, améliorant ainsi l'expérience utilisateur pour différentes langues.",
+  
+  "react_query_infinite": "Défilement infini avec TanStack React Query",
+  "react_query_infinite_description": "Nous utilisons useInfiniteQuery de TanStack React Query pour implémenter la fonctionnalité de défilement infini dans nos tableaux, assurant une récupération fluide des données pendant que l'utilisateur fait défiler.",
+  
+  "axios_api": "Gestion des appels API avec Axios",
+  "axios_api_description": "Axios est utilisé pour gérer les demandes API de manière structurée, garantissant une gestion facile des requêtes GET et POST avec une gestion robuste des erreurs.",
+  
+  "component_architecture": "Architecture basée sur les composants",
+  "component_architecture_description": "En divisant l'application en composants plus petits et réutilisables, nous garantissons que seuls les composants nécessaires sont rendus à nouveau lorsque l'état change, optimisant ainsi les performances et réduisant les rendus inutiles.",
+  
+  "lazy_loading_router": "Chargement paresseux avec TanStack Router",
+  "lazy_loading_router_description": "Nous utilisons TanStack Router pour le chargement paresseux des composants, ce qui aide à charger uniquement les parties nécessaires de l'application lorsque cela est nécessaire, améliorant ainsi le temps de chargement initial et l'expérience utilisateur.",
+  
+  "click_to_change_view": "Cliquez sur l'onglet ci-dessus pour changer de vue ou charger un composant spécifique."
+  
   }
   
